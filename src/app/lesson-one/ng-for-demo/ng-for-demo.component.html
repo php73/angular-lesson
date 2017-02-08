@@ -5,7 +5,7 @@
             <ol>
                 <li *ngFor="let person of persons"  [style.background-color]="person.background">
                     <p>
-                        <span>{{ person.name }}</span>
+                        <span>{{ person.name }} <span style="font-size: 11px" *ngIf="person.birthday">(birthday: {{ person.birthday | date:'y-MM-dd' }})</span></span>
                         <button (click)="removePerson(person)" class="btn btn-danger btn-xs">x</button>
                     </p>
                 </li>

@@ -1,14 +1,14 @@
 [
- { "name": "Атомули Ядалато", "background": "red"},
- { "name": "Мояхата Сыровата", "background": "green"},
- { "name": "Комухари Комусиси", "background": "gray"},
- { "name": "Комуто Херовато", "background": "violet"},
- { "name": "Томимо Токосо", "background": "gray"},
- { "name": "Толисику Толикаку", "background": "gray"},
- { "name": "Херанука Пороялю", "background": "gray"},
- { "name": "Тояма Токанава", "background": "gray"},
- { "name": "Совсейдури Охерачу", "background": "gray"},
- { "name": "Ручищито Ширехари", "background": "gray"}
+ { "name": "Атомули Ядалато", "background": "red", "birthday": "01.01.1985"},
+ { "name": "Мояхата Сыровата", "background": "green", "birthday": "1991-06-05"},
+ { "name": "Комухари Комусиси", "background": "gray", "birthday": "01.03.1985"},
+ { "name": "Комуто Херовато", "background": "violet", "birthday": "1990-03-02"},
+ { "name": "Томимо Токосо", "background": "gray", "birthday": "01.04.1985"},
+ { "name": "Толисику Толикаку", "background": "gray", "birthday": "05.11.1985"},
+ { "name": "Херанука Пороялю", "background": "gray", "birthday": "11.01.1985"},
+ { "name": "Тояма Токанава", "background": "gray", "birthday": "08.12.1985"},
+ { "name": "Совсейдури Охерачу", "background": "gray", "birthday": "12.12.1985"},
+ { "name": "Ручищито Ширехари", "background": "gray", "birthday": "1985/12/11"}
 ]
 
 

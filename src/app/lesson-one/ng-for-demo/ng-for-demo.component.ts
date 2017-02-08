@@ -11,8 +11,8 @@ export class NgForDemoComponent implements OnInit {
     public personName = '';
     public personBackground = 'white';
     public persons = [
-        {name: 'Alice', background: 'white'},
-        {name: 'Bob', background: 'white'}
+        {name: 'Alice', background: 'white', birthday: "01.01.1985"},
+        {name: 'Bob', background: 'white', birthday: "2001-10-23"}
     ];
 
     constructor(private http: Http) {
@@ -22,7 +22,7 @@ export class NgForDemoComponent implements OnInit {
     }
 
     public addPerson() {
-        this.persons.push({name: this.personName, background: this.personBackground});
+        this.persons.push({name: this.personName, background: this.personBackground, birthday: null});
         this.personName = '';
     }
 
