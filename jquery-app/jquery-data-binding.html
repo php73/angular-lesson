@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery Data Binding</title>
+  </head>
+  <body>
+    Ваше имя: <span id="name"></span><br/><br/>
+    Введите имя: <input id="input-name" type="text" name="name" value="">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        var $name = $('#name'),
+            $inputName = $('#input-name');
+        $inputName.on('input', function () {
+          var value = $(this).val();
+          $name.text(value);
+        });
+      });
+    </script>
+
+  </body>
+</html>
