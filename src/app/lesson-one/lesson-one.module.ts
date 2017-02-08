@@ -6,12 +6,14 @@ import { NgForDemoComponent } from "./ng-for-demo/ng-for-demo.component";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
+import { HttpModule } from "@angular/http";
 
 @NgModule({
     imports: [
         BrowserModule,
         CommonModule,
-        FormsModule
+        FormsModule,
+        HttpModule,
     ],
     declarations: [
         LessonOneComponent,
