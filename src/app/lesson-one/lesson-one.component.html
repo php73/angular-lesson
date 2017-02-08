@@ -1,12 +1,19 @@
-<h1>My first Angular component</h1>
+<h1 class="text-center">My first Angular component</h1>
 
-<div>
-    <label for="lesson1">Data binding</label>
-    <input type="checkbox" id="lesson1" [(ngModel)]="dataBind" value="1">
+<div class="row">
+    <div class="col-md-12">
+        <div class="checkbox">
+            <label for="lesson1">
+                <input tabindex="1" type="checkbox" id="lesson1" [(ngModel)]="dataBind" value="1"> Data binding
+            </label>
+        </div>
+    </div>
 </div>
 
-<div *ngIf="dataBind">
+<div class="jumbotron" *ngIf="dataBind">
     <h3>Data binding</h3>
-    <input type="text" [(ngModel)]="username" placeholder="Username">
+    <div class="form-group">
+        <input tabindex="2" class="form-control" type="text" [(ngModel)]="username" placeholder="Username">
+    </div>
     <p>Hello {{ username || 'world' }}!!!</p>
 </div>

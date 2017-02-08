@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LessonOneComponent } from "./lesson-one/lesson-one.component";
+import {Ng2BootstrapModule} from "ng2-bootstrap";
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { LessonOneComponent } from "./lesson-one/lesson-one.component";
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    Ng2BootstrapModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
