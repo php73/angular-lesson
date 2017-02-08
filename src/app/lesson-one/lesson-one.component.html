@@ -3,8 +3,13 @@
 <div class="row">
     <div class="col-md-12">
         <div class="checkbox">
-            <label for="lesson1">
-                <input tabindex="1" type="checkbox" id="lesson1" [(ngModel)]="dataBind" value="1"> Data binding
+            <label for="dataBind">
+                <input tabindex="1" type="checkbox" id="dataBind" [(ngModel)]="dataBind" value="1"> Data binding
+            </label>
+        </div>
+        <div class="checkbox">
+            <label for="ngForSample">
+                <input tabindex="1" type="checkbox" id="ngForSample" [(ngModel)]="ngForSample" value="1"> ngFor, events, attributes directives
             </label>
         </div>
     </div>
@@ -16,4 +21,35 @@
         <input tabindex="2" class="form-control" type="text" [(ngModel)]="username" placeholder="Username">
     </div>
     <p>Hello {{ username || 'world' }}!!!</p>
+</div>
+
+<div class="jumbotron" *ngIf="ngForSample">
+    <h2>*ngFor</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <ol>
+                <li *ngFor="let person of persons"  [style.background-color]="person.background">
+                    <p>
+                        <span>{{ person.name }}</span>
+                        <button (click)="removePerson(person)" class="btn btn-danger btn-xs">x</button>
+                    </p>
+                </li>
+            </ol>
+        </div>
+        <div class="col-md-6">
+            <div class="form-group">
+                <input tabindex="2" class="form-control" type="text" [(ngModel)]="personName" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <select name="color" id="color" class="form-control" [(ngModel)]="personBackground">
+                    <option value="white">White</option>
+                    <option value="red">Red</option>
+                    <option value="yellow">Yellow</option>
+                    <option value="green">Green</option>
+                    <option value="gray">Gray</option>
+                </select>
+            </div>
+            <button class="btn btn-info" tabindex="4" [disabled]="!personName" (click)="addPerson();">Add person</button>
+        </div>
+    </div>
 </div>
