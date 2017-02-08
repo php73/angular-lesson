@@ -4,21 +4,22 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { LessonOneComponent } from "./lesson-one/lesson-one.component";
-import {Ng2BootstrapModule} from "ng2-bootstrap";
+import { Ng2BootstrapModule } from "ng2-bootstrap";
+import { LessonOneModule } from "./lesson-one/lesson-one.module";
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    LessonOneComponent,
-  ],
-  imports: [
-    BrowserModule,
-    FormsModule,
-    HttpModule,
-    Ng2BootstrapModule.forRoot(),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+    ],
+    imports: [
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        Ng2BootstrapModule.forRoot(),
+        LessonOneModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
