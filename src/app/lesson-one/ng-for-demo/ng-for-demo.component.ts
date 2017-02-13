@@ -9,10 +9,10 @@ import 'rxjs/add/operator/toPromise';
 export class NgForDemoComponent implements OnInit {
 
     public personName = '';
-    public personBackground = 'white';
+    public personBackground = 'black';
     public persons = [
-        {name: 'Alice', background: 'white', birthday: "01.01.1985"},
-        {name: 'Bob', background: 'white', birthday: "2001-10-23"}
+        {name: 'Alice', background: 'black', birthday: "01.01.1985"},
+        {name: 'Bob', background: 'black', birthday: "2001-10-23"}
     ];
 
     constructor(private http: Http) {
