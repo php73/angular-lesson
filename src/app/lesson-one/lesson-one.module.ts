@@ -7,6 +7,7 @@ import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
+import { RouterModule } from "@angular/router";
 
 @NgModule({
     imports: [
@@ -14,6 +15,12 @@ import { HttpModule } from "@angular/http";
         CommonModule,
         FormsModule,
         HttpModule,
+        RouterModule.forChild([
+            {
+                path: 'lesson1',
+                component: LessonOneComponent
+            }
+        ]),
     ],
     declarations: [
         LessonOneComponent,
@@ -23,7 +30,8 @@ import { HttpModule } from "@angular/http";
     exports: [
         LessonOneComponent
     ],
-    providers: [],
+    providers: [
+    ],
 })
 export class LessonOneModule {
 }
