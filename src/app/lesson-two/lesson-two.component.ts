@@ -6,10 +6,16 @@ import {Component, OnInit} from '@angular/core';
 })
 export class LessonTwoComponent implements OnInit {
 
+
+    public tudaSudaValue = 0;
+
     constructor() {
     }
 
     ngOnInit() {
     }
 
+    setTudaSuda($event) {
+        this.tudaSudaValue = $event;
+    }
 }

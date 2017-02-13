@@ -10,6 +10,7 @@ import { MenuComponent } from "./menu/menu.component";
 import { MenuItemComponent } from "./menu-item/menu-item.component";
 import { TooltipComponent } from "./tooltip/tooltip.component";
 import { StopwatchComponent } from "./stopwatch/stopwatch.component";
+import { TudaSudaComponent } from "./tuda-suda/tuda-suda.component";
 
 @NgModule({
     imports: [
@@ -30,6 +31,7 @@ import { StopwatchComponent } from "./stopwatch/stopwatch.component";
         MenuItemComponent,
         TooltipComponent,
         StopwatchComponent,
+        TudaSudaComponent,
     ],
     exports: [
         MenuComponent
