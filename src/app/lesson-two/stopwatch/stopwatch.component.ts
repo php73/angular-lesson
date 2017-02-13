@@ -1,12 +1,11 @@
-import { Component, OnInit, DoCheck, SimpleChanges, OnChanges } from '@angular/core';
-import { setInterval } from "timers";
+import { Component, OnInit, DoCheck, SimpleChanges, OnChanges, OnDestroy } from '@angular/core';
 
 @Component({
     selector: 'mediasoft-stopwatch',
     templateUrl: 'stopwatch.component.html',
     styleUrls: ['stopwatch.component.css']
 })
-export class StopwatchComponent implements OnInit, DoCheck, OnChanges {
+export class StopwatchComponent implements OnInit, DoCheck, OnChanges, OnDestroy {
     
     public lifetime = 0;
     public interval;
@@ -61,7 +60,8 @@ export class StopwatchComponent implements OnInit, DoCheck, OnChanges {
 
     ngOnDestroy() {
         // Вызывается единожды при уничтожении компонента
-        this.log('ngOnDestroy')
+        this.log('ngOnDestroy');
+        clearInterval(this.interval);
     }
 
     public log(message) {
