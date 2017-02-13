@@ -3,7 +3,7 @@
         <div class="navbar-header" (mouseenter)="tooltip1.show()" (mouseleave)="tooltip1.hide()">
             <a class="navbar-brand" routerLink="/">
                 Mediasoft
-                <mediasoft-tooltip #tooltip1>
+                <mediasoft-tooltip #tooltip1="mediasoft-tooltip">
                     <span>Web software engineering</span>
                 </mediasoft-tooltip>
             </a>
@@ -12,7 +12,7 @@
         <div class="navbar-header" (mouseenter)="tooltip2.show()" (mouseleave)="tooltip2.hide()">
             <a class="navbar-brand" routerLink="/">
                 Eduction
-                <mediasoft-tooltip #tooltip2>
+                <mediasoft-tooltip #tooltip2="mediasoft-tooltip">
                     <span>Free, Fast, Interesting</span>
                 </mediasoft-tooltip>
             </a>

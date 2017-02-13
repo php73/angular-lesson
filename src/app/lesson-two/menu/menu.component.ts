@@ -9,9 +9,6 @@ import { TooltipComponent } from "../tooltip/tooltip.component";
 })
 export class MenuComponent implements OnInit {
 
-    @ViewChild('tooltip1') public tooltip1: TooltipComponent;
-    @ViewChild('tooltip2') public tooltip2: TooltipComponent;
-
     private items = [];
 
     public menu: MenuItem[] = <MenuItem[]>[

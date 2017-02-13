@@ -2,6 +2,7 @@ import { Component, OnInit, Input, ViewChild } from '@angular/core';
 
 @Component({
     selector: 'mediasoft-tooltip',
+    exportAs: 'mediasoft-tooltip',
     templateUrl: 'tooltip.component.html',
     styleUrls: ['./tooltip.component.css'],
     host: {
@@ -12,7 +13,7 @@ export class TooltipComponent implements OnInit {
 
     private isHidden = true;
 
-        public ngOnInit() {};
+    public ngOnInit() {};
 
     public show() {
         this.isHidden = false;
