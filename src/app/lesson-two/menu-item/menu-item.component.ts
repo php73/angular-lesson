@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MenuItem } from "../shared/menu-item.model";
+import { MenuComponent } from "../menu/menu.component";
 
 @Component({
     selector: '[mediasoft-menu-item]',
@@ -14,16 +15,19 @@ export class MenuItemComponent implements OnInit {
 
     @Input('mediasoft-menu-item') public item: MenuItem;
 
-    constructor() { }
+    constructor(protected menu: MenuComponent) { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        this.menu.registerItem(this)
+    }
 
-    toggle($event, item) {
-        if (!item.children) {
-            return;
-        }
+
+    onClick($event) {
+       if (!this.item.children) {
+           return;
+       }
+
         $event.preventDefault();
-
-        this.collapsed = !this.collapsed;
+        this.menu.toggle(this);
     }
 }

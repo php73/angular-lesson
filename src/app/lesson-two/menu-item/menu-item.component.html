@@ -1,4 +1,4 @@
-<a (click)="toggle($event, item)" [routerLink]="item.link">
+<a (click)="onClick($event)" [routerLink]="item.link">
     {{ item.text }}
     <span *ngIf="item.children" class="caret"></span>
 </a>

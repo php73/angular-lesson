@@ -1,11 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from "../shared/menu-item.model";
+import { MenuItemComponent } from "../menu-item/menu-item.component";
 
 @Component({
     selector: 'mediasoft-menu',
     templateUrl: 'menu.component.html'
 })
 export class MenuComponent implements OnInit {
+    private items = [];
+
     public menu: MenuItem[] = <MenuItem[]>[
         <MenuItem>{link: 'lesson1', text: 'Lesson 1'},
         <MenuItem>{link: 'lesson2', text: 'Lesson 2'},
@@ -29,4 +32,23 @@ export class MenuComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
+
+    public registerItem(item: MenuItemComponent) {
+        this.items.push(item);
+    }
+
+    public toggle(target: MenuItemComponent) {
+        if (target.collapsed === false) {
+            target.collapsed = true;
+            return;
+        }
+
+        for (let item of this.items) {
+            if (target === item || item.collapsed === true) {
+                continue;
+            }
+            item.collapsed = true;
+        }
+        target.collapsed = false;
+    }
 }
