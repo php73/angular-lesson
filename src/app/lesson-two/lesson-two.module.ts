@@ -9,6 +9,7 @@ import { RouterModule } from "@angular/router";
 import { MenuComponent } from "./menu/menu.component";
 import { MenuItemComponent } from "./menu-item/menu-item.component";
 import { TooltipComponent } from "./tooltip/tooltip.component";
+import { StopwatchComponent } from "./stopwatch/stopwatch.component";
 
 @NgModule({
     imports: [
@@ -28,6 +29,7 @@ import { TooltipComponent } from "./tooltip/tooltip.component";
         MenuComponent,
         MenuItemComponent,
         TooltipComponent,
+        StopwatchComponent,
     ],
     exports: [
         MenuComponent

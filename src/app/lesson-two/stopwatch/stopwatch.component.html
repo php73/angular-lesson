@@ -1,0 +1,7 @@
+<div class="clock">
+    <p>Вы смотрите на этот компонент уже: {{ lifetime }} секунд</p>
+    <p>За это время в нём произошло множество событий</p>
+    <ul>
+        <li *ngFor="let message of logMessages"><pre>{{ message }}</pre></li>
+    </ul>
+</div>
