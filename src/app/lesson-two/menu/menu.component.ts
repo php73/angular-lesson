@@ -6,8 +6,6 @@ import { MenuItem } from "../shared/menu-item.model";
     templateUrl: 'menu.component.html'
 })
 export class MenuComponent implements OnInit {
-    public collapsed = true;
-
     public menu: MenuItem[] = <MenuItem[]>[
         <MenuItem>{link: 'lesson1', text: 'Lesson 1'},
         <MenuItem>{link: 'lesson2', text: 'Lesson 2'},
@@ -31,13 +29,4 @@ export class MenuComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
-
-    onItemClick($event, item) {
-        if (!item.children) {
-            return;
-        }
-        $event.preventDefault();
-
-        this.collapsed = !this.collapsed;
-    }
 }

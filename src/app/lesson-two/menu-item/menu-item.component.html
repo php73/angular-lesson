@@ -1,0 +1,7 @@
+<a (click)="toggle($event, item)" [routerLink]="item.link">
+    {{ item.text }}
+    <span *ngIf="item.children" class="caret"></span>
+</a>
+<ul *ngIf="item.children" class="dropdown-menu" >
+    <li *ngFor="let child of item.children" [mediasoft-menu-item]="child"></li>
+</ul>

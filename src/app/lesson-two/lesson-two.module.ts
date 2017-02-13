@@ -7,6 +7,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
 import { MenuComponent } from "./menu/menu.component";
+import { MenuItemComponent } from "./menu-item/menu-item.component";
 
 @NgModule({
     imports: [
@@ -24,6 +25,7 @@ import { MenuComponent } from "./menu/menu.component";
     declarations: [
         LessonTwoComponent,
         MenuComponent,
+        MenuItemComponent,
     ],
     exports: [
         MenuComponent

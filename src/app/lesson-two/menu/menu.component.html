@@ -6,17 +6,7 @@
 
         <div class="collapse navbar-collapse" >
             <ul class="nav navbar-nav">
-                <li *ngFor="let item of menu" [class.dropdown]="item.children" [class.open]="!collapsed">
-                    <a (click)="onItemClick($event, item)" [routerLink]="item.link">
-                        {{ item.text }}
-                        <span *ngIf="item.children" class="caret"></span>
-                    </a>
-                    <ul *ngIf="item.children" class="dropdown-menu" >
-                        <li *ngFor="let nested of item.children" >
-                            <a [routerLink]="nested.link || '#'">{{ nested.text }}</a>
-                        </li>
-                    </ul>
-                </li>
+                <li *ngFor="let item of menu" [mediasoft-menu-item]="item"></li>
             </ul>
         </div>
     </div>
