@@ -8,6 +8,7 @@ import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
 import { MenuComponent } from "./menu/menu.component";
 import { MenuItemComponent } from "./menu-item/menu-item.component";
+import { TooltipComponent } from "./tooltip/tooltip.component";
 
 @NgModule({
     imports: [
@@ -26,6 +27,7 @@ import { MenuItemComponent } from "./menu-item/menu-item.component";
         LessonTwoComponent,
         MenuComponent,
         MenuItemComponent,
+        TooltipComponent,
     ],
     exports: [
         MenuComponent

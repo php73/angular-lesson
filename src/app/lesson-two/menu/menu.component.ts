@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MenuItem } from "../shared/menu-item.model";
 import { MenuItemComponent } from "../menu-item/menu-item.component";
+import { TooltipComponent } from "../tooltip/tooltip.component";
 
 @Component({
     selector: 'mediasoft-menu',
     templateUrl: 'menu.component.html'
 })
 export class MenuComponent implements OnInit {
+
+    @ViewChild(TooltipComponent) public tooltip: TooltipComponent;
+
     private items = [];
 
     public menu: MenuItem[] = <MenuItem[]>[
@@ -31,7 +35,9 @@ export class MenuComponent implements OnInit {
 
     constructor() { }
 
-    ngOnInit() { }
+    ngOnInit() {
+        console.log(this.tooltip)
+    }
 
     public registerItem(item: MenuItemComponent) {
         this.items.push(item);
