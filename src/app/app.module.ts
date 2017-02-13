@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { Ng2BootstrapModule } from "ng2-bootstrap";
 import { LessonOneModule } from "./lesson-one/lesson-one.module";
 import { RouterModule } from "@angular/router";
+import { LessonTwoModule } from "./lesson-two/lesson-two.module";
 
 @NgModule({
     declarations: [
@@ -24,6 +25,7 @@ import { RouterModule } from "@angular/router";
             useHash: false
         }),
         LessonOneModule,
+        LessonTwoModule,
     ],
     providers: [],
     bootstrap: [AppComponent]
