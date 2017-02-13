@@ -9,7 +9,8 @@ import { TooltipComponent } from "../tooltip/tooltip.component";
 })
 export class MenuComponent implements OnInit {
 
-    @ViewChild(TooltipComponent) public tooltip: TooltipComponent;
+    @ViewChild('tooltip1') public tooltip1: TooltipComponent;
+    @ViewChild('tooltip2') public tooltip2: TooltipComponent;
 
     private items = [];
 
@@ -36,7 +37,6 @@ export class MenuComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-        console.log(this.tooltip)
     }
 
     public registerItem(item: MenuItemComponent) {

@@ -1,10 +1,19 @@
 <nav class="navbar navbar-default">
     <div class="container-fluid">
-        <div class="navbar-header" (mouseenter)="tooltip.show()" (mouseleave)="tooltip.hide()">
+        <div class="navbar-header" (mouseenter)="tooltip1.show()" (mouseleave)="tooltip1.hide()">
             <a class="navbar-brand" routerLink="/">
                 Mediasoft
-                <mediasoft-tooltip>
+                <mediasoft-tooltip #tooltip1>
                     <span>Web software engineering</span>
+                </mediasoft-tooltip>
+            </a>
+        </div>
+
+        <div class="navbar-header" (mouseenter)="tooltip2.show()" (mouseleave)="tooltip2.hide()">
+            <a class="navbar-brand" routerLink="/">
+                Eduction
+                <mediasoft-tooltip #tooltip2>
+                    <span>Free, Fast, Interesting</span>
                 </mediasoft-tooltip>
             </a>
         </div>
