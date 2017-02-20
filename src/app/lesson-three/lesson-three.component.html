@@ -17,7 +17,8 @@
             <div class="form-group">
                 <label for="password">Password</label>
                 <div class="input-group">
-                    <input id="password"
+                    <input #password="ngModel"
+                           id="password"
                            name="password"
                            [type]="passwordVisible ? 'text' : 'password'"
                            class="form-control"
@@ -42,7 +43,7 @@
                            class="form-control"
                            [(ngModel)]="user.passwordRepeat"
                            [required]="true"
-                           [mediasoft-equals-validator]="user.password">
+                           [mediasoft-equals-validator]="password">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="button" (click)="togglePasswordRepeatVisibility()">
                             <i class="glyphicon glyphicon-eye-open"></i>

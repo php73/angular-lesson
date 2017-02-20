@@ -6,7 +6,7 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
-import { EqualsValidatorDirective } from "./equals-validator/equals-validator.component";
+import { EqualsValidatorDirective } from "./equals-validator/equals.directive";
 
 @NgModule({
     imports: [
