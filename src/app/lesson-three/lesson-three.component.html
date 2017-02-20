@@ -35,12 +35,14 @@
             <div class="form-group">
                 <label for="password-repeat">Repeat password</label>
                 <div class="input-group">
-                    <input id="password-repeat"
+                    <input #passwordRepeat="ngModel"
+                           id="password-repeat"
                            name="password-repeat"
                            [type]="passwordRepeatVisible ? 'text' : 'password'"
                            class="form-control"
                            [(ngModel)]="user.passwordRepeat"
-                           [required]="true">
+                           [required]="true"
+                           [mediasoft-equals-validator]="user.password">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="button" (click)="togglePasswordRepeatVisibility()">
                             <i class="glyphicon glyphicon-eye-open"></i>
@@ -55,6 +57,7 @@
         </form>
     </div>
     <div class="col-md-5">
+        <h4>registrationForm</h4>
         <table class="table table-bordered">
             <tbody>
             <tr *ngFor="let prop of ['valid', 'invalid', 'pristine', 'dirty', 'touched', 'untouched', 'enabled', 'disabled', 'pending']">
@@ -63,5 +66,7 @@
             </tr>
             </tbody>
         </table>
+        <h4>passwordRepeat</h4>
+        <pre>{{ passwordRepeat.errors | json }}</pre>
     </div>
 </div>

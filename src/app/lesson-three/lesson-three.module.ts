@@ -6,6 +6,7 @@ import { HttpModule } from "@angular/http";
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
+import { EqualsValidatorDirective } from "./equals-validator/equals-validator.component";
 
 @NgModule({
     imports: [
@@ -21,7 +22,10 @@ import { BrowserModule } from "@angular/platform-browser";
         ]),
     ],
     exports: [],
-    declarations: [LessonThreeComponent],
+    declarations: [
+        LessonThreeComponent,
+        EqualsValidatorDirective,
+    ],
     providers: [],
 })
 export class LessonThreeModule { }
