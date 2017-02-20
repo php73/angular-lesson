@@ -1,0 +1,16 @@
+<table class="table">
+    <tbody>
+    <tr>
+        <td width="60%">
+            <img style="width: 100%;" src="http://image.captchas.net/?client=demo&random={{ random }}" alt="">
+        </td>
+        <td>
+            <input class="form-control" type="text" placeholder="Enter CAPTCHA here..."
+                   [(ngModel)]="value"
+                   [disabled]="disabled"
+                   (blur)="touch()"
+            >
+        </td>
+    </tr>
+    </tbody>
+</table>

@@ -26,7 +26,7 @@
                            [required]="true"
                            [minlength]="3">
                     <div class="input-group-btn">
-                        <button class="btn btn-default" type="button" (click)="togglePasswordVisibility()">
+                        <button tabindex="-1" class="btn btn-default" type="button" (click)="togglePasswordVisibility()">
                             <i class="glyphicon glyphicon-eye-open"></i>
                         </button>
                     </div>
@@ -45,12 +45,13 @@
                            [required]="true"
                            [mediasoft-equals-validator]="password">
                     <div class="input-group-btn">
-                        <button class="btn btn-default" type="button" (click)="togglePasswordRepeatVisibility()">
+                        <button tabindex="-1 " class="btn btn-default" type="button" (click)="togglePasswordRepeatVisibility()">
                             <i class="glyphicon glyphicon-eye-open"></i>
                         </button>
                     </div>
                 </div>
             </div>
+            <mediasoft-captcha name="captcha" class="form-group" [(ngModel)]="user.captcha" [required]="true"></mediasoft-captcha>
             <div class="text-center">
                 <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Submit</button>
                 <button type="button" class="btn btn-warning" (click)="registrationForm.reset()">Reset</button>

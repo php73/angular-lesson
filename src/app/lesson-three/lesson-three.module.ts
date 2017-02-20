@@ -7,6 +7,7 @@ import { FormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { EqualsValidatorDirective } from "./equals-validator/equals.directive";
+import { CaptchaComponent } from "./captcha/captcha.component";
 
 @NgModule({
     imports: [
@@ -25,6 +26,7 @@ import { EqualsValidatorDirective } from "./equals-validator/equals.directive";
     declarations: [
         LessonThreeComponent,
         EqualsValidatorDirective,
+        CaptchaComponent,
     ],
     providers: [],
 })
