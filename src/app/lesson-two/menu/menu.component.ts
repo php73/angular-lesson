@@ -14,6 +14,7 @@ export class MenuComponent implements OnInit {
     public menu: MenuItem[] = <MenuItem[]>[
         <MenuItem>{link: 'lesson1', text: 'Lesson 1'},
         <MenuItem>{link: 'lesson2', text: 'Lesson 2'},
+        <MenuItem>{link: 'lesson3', text: 'Lesson 3'},
         <MenuItem>{
             text: 'Mediasoft',
             children: [
