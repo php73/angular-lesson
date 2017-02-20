@@ -2,24 +2,45 @@
     <div class="col-md-7">
         <form #registrationForm="ngForm" (submit)="submit()">
             <div class="form-group">
-                <label for="username">Username</label>
-                <input id="username" name="username" type="text" class="form-control" [(ngModel)]="user.username">
+                <label for="username">Username <sup>*</sup></label>
+                <input id="username"
+                       name="username"
+                       type="text"
+                       class="form-control"
+                       [(ngModel)]="user.username"
+                       [required]="true"
+                       [minlength]="3"
+                       [maxlength]="10"
+                       pattern="^[a-zA-Z]*">
+                <p class="hint">Required, Minimal length: 3, Maximal length: 10</p>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
                 <div class="input-group">
-                    <input id="password" name="password" [type]="passwordVisible ? 'text' : 'password'" class="form-control" [(ngModel)]="user.password">
+                    <input id="password"
+                           name="password"
+                           [type]="passwordVisible ? 'text' : 'password'"
+                           class="form-control"
+                           [(ngModel)]="user.password"
+                           [required]="true"
+                           [minlength]="3">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="button" (click)="togglePasswordVisibility()">
                             <i class="glyphicon glyphicon-eye-open"></i>
                         </button>
                     </div>
                 </div>
+                <p class="hint">Required, Minimal length: 3</p>
             </div>
             <div class="form-group">
                 <label for="password-repeat">Repeat password</label>
                 <div class="input-group">
-                    <input id="password-repeat" name="password-repeat" [type]="passwordRepeatVisible ? 'text' : 'password'" class="form-control" [(ngModel)]="user.passwordRepeat">
+                    <input id="password-repeat"
+                           name="password-repeat"
+                           [type]="passwordRepeatVisible ? 'text' : 'password'"
+                           class="form-control"
+                           [(ngModel)]="user.passwordRepeat"
+                           [required]="true">
                     <div class="input-group-btn">
                         <button class="btn btn-default" type="button" (click)="togglePasswordRepeatVisibility()">
                             <i class="glyphicon glyphicon-eye-open"></i>
@@ -28,7 +49,7 @@
                 </div>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Submit</button>
                 <button type="button" class="btn btn-warning" (click)="registrationForm.reset()">Reset</button>
             </div>
         </form>
