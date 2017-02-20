@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { LessonThreeComponent } from './lesson-three.component';
 import { RouterModule } from "@angular/router";
 import { HttpModule } from "@angular/http";
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { EqualsValidatorDirective } from "./equals-validator/equals.directive";
@@ -12,7 +12,7 @@ import { EqualsValidatorDirective } from "./equals-validator/equals.directive";
     imports: [
         BrowserModule,
         CommonModule,
-        FormsModule,
+        ReactiveFormsModule,
         HttpModule,
         RouterModule.forChild([
             {
