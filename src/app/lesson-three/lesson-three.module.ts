@@ -8,6 +8,8 @@ import { CommonModule } from "@angular/common";
 import { BrowserModule } from "@angular/platform-browser";
 import { EqualsValidatorDirective } from "./equals-validator/equals.directive";
 import { CaptchaComponent } from "./captcha/captcha.component";
+import { CountriesSelectComponent } from "./countries-select/countries-select.component";
+import { CountriesSelectValidator } from "./countries-select/countries-select.directive";
 
 @NgModule({
     imports: [
@@ -27,6 +29,8 @@ import { CaptchaComponent } from "./captcha/captcha.component";
         LessonThreeComponent,
         EqualsValidatorDirective,
         CaptchaComponent,
+        CountriesSelectComponent,
+        CountriesSelectValidator,
     ],
     providers: [],
 })

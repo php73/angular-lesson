@@ -1,0 +1,11 @@
+<ul *ngIf="countries" class="nav nav-pills" >
+    <li *ngFor="let country of countries" [class.active]="country.name === value">
+        <a (click)="select($event, country)">{{ country.name }}</a>
+    </li>
+</ul>
+
+<div class="progress" *ngIf="!countries">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+        <span>Loading countries list</span>
+    </div>
+</div>

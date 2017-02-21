@@ -1,0 +1,8 @@
+.progress .progress-bar {
+    width: 99%;
+    line-height: 22px;
+}
+.progress  {
+    height: 22px;
+    line-height: 22px;
+}

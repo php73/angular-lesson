@@ -51,6 +51,9 @@
                     </div>
                 </div>
             </div>
+            <mediasoft-countries-select #countries="ngModel" name="country" class="form-group"
+                                        [(ngModel)]="user.country" [required]="true">
+            </mediasoft-countries-select>
             <mediasoft-captcha name="captcha" class="form-group" [(ngModel)]="user.captcha" [required]="true"></mediasoft-captcha>
             <div class="text-center">
                 <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Submit</button>
@@ -68,6 +71,10 @@
             </tr>
             </tbody>
         </table>
+        <h4>#countries</h4>
+        <pre>{{ countries.errors | json }}</pre>
+        <h4>User</h4>
+        <pre>{{ user | json }}</pre>
         <h4>passwordRepeat</h4>
         <pre>{{ passwordRepeat.errors | json }}</pre>
     </div>
