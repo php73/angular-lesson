@@ -51,9 +51,29 @@
                     </div>
                 </div>
             </div>
-            <mediasoft-countries-select #countries="ngModel" name="country" class="form-group"
-                                        [(ngModel)]="user.country" [required]="true">
-            </mediasoft-countries-select>
+            <div class="form-group">
+                <label>Country</label>
+                <mediasoft-countries-select id="country" #countries="ngModel" name="country"
+                                            [(ngModel)]="user.country" [required]="true">
+                </mediasoft-countries-select>
+            </div>
+            <div class="form-group">
+                <label>Hobbies</label>
+                <div class="form-group" *ngFor="let hobbie of user.hobbies;let $index = index; trackBy: trackBy">
+                    <div class="input-group">
+                        <input type="text" [(ngModel)]="user.hobbies[$index]"
+                               [name]="'hobbie_'+$index"
+                               class="form-control" placeholder="Hobbie">
+                        <div class="input-group-btn">
+                            <button class="btn btn-default" (click)="user.hobbies.splice($index, 1)" type="button">x</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <button class="btn btn-default btn-xs" type="button" (click)="user.hobbies.push('')">+</button>
+                </div>
+            </div>
+            <hr>
             <mediasoft-captcha name="captcha" class="form-group" [(ngModel)]="user.captcha" [required]="true"></mediasoft-captcha>
             <div class="text-center">
                 <button type="submit" class="btn btn-success" [disabled]="registrationForm.invalid">Submit</button>

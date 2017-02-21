@@ -9,7 +9,9 @@ export class LessonThreeComponent implements OnInit {
     public formEnabled: boolean = true;
     public passwordVisible: boolean = false;
     public passwordRepeatVisible: boolean = false;
-    public user: any = {};
+    public user: any = {
+        hobbies: []
+    };
 
     constructor() { }
 
@@ -24,5 +26,9 @@ export class LessonThreeComponent implements OnInit {
     }
     togglePasswordRepeatVisibility() {
         this.passwordRepeatVisible = !this.passwordRepeatVisible;
+    }
+
+    public trackBy(index, item) {
+        return index;
     }
 }
