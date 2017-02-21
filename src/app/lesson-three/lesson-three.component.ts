@@ -11,7 +11,7 @@ export class LessonThreeComponent implements OnInit {
     public passwordRepeatVisible: boolean = false;
     public user: any = {
         hobbies: [],
-        profession: 'web_engineer',
+        profession: { value: 'web_engineer', label: 'WEB Engineer'},
     };
 
     public professions = [
@@ -36,5 +36,9 @@ export class LessonThreeComponent implements OnInit {
 
     public trackBy(index, item) {
         return index;
+    }
+
+    public professionCompare(a, b) {
+        return a && b && a.value === b.value;
     }
 }

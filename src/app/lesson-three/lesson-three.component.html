@@ -59,8 +59,8 @@
             </div>
             <div class="form-group">
                 <label for="profession">Profession</label>
-                <select class="form-control" name="profession" id="profession" [(ngModel)]="user.profession">
-                    <option *ngFor="let profession of professions" [value]="profession.value">
+                <select class="form-control" name="profession" id="profession" [(ngModel)]="user.profession" [compareWith]="professionCompare">
+                    <option *ngFor="let profession of professions" [ngValue]="profession">
                         {{ profession.label }}
                     </option>
                 </select>
