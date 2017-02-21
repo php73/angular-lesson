@@ -10,8 +10,14 @@ export class LessonThreeComponent implements OnInit {
     public passwordVisible: boolean = false;
     public passwordRepeatVisible: boolean = false;
     public user: any = {
-        hobbies: []
+        hobbies: [],
+        profession: 'web_engineer',
     };
+
+    public professions = [
+        { value: 'web_engineer', label: 'WEB Engineer'},
+        { value: 'devops', label: 'Devops'},
+    ];
 
     constructor() { }
 

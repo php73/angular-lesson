@@ -58,6 +58,14 @@
                 </mediasoft-countries-select>
             </div>
             <div class="form-group">
+                <label for="profession">Profession</label>
+                <select class="form-control" name="profession" id="profession" [(ngModel)]="user.profession">
+                    <option *ngFor="let profession of professions" [value]="profession.value">
+                        {{ profession.label }}
+                    </option>
+                </select>
+            </div>
+            <div class="form-group">
                 <label>Hobbies</label>
                 <div class="form-group" *ngFor="let hobbie of user.hobbies;let $index = index; trackBy: trackBy">
                     <div class="input-group">
