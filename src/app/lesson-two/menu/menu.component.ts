@@ -1,7 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MenuItem } from "../shared/menu-item.model";
 import { MenuItemComponent } from "../menu-item/menu-item.component";
-import { TooltipComponent } from "../tooltip/tooltip.component";
 
 @Component({
     selector: 'mediasoft-menu',
@@ -16,6 +15,7 @@ export class MenuComponent implements OnInit {
         <MenuItem>{link: 'lesson2', text: 'Lesson 2'},
         <MenuItem>{link: 'lesson3', text: 'Lesson 3'},
         <MenuItem>{link: 'lesson4', text: 'Lesson 4'},
+        <MenuItem>{link: 'cars', text: 'Lesson 4 routing'},
         <MenuItem>{
             text: 'Mediasoft',
             children: [

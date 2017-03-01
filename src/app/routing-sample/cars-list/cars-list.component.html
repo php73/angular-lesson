@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Manufacturer</th>
+                <th>Model</th>
+                <th></th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let car of cars">
+                <td>{{ car.id }}</td>
+                <td>{{ car.manufacturer }}</td>
+                <td>{{ car.model }}</td>
+                <td>
+                    <a [routerLink]="['/cars', car.id]" class="btn btn-default btn-xs"><i class="glyphicon glyphicon-eye-open"></i></a>
+                </td>
+            </tr>
+            </tbody>
+            <tfoot></tfoot>
+        </table>
+    </div>
+</div>
