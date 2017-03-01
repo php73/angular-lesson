@@ -1,0 +1,30 @@
+.toast-container {
+    position: fixed;
+    width: 285px;
+}
+
+.toast-container.left {
+    left: 2px;
+}
+
+.toast-container.center {
+    left: 50%;
+    margin-left: -142.5px;
+}
+
+.toast-container.right {
+    right: 2px;
+}
+
+.toast-container.top {
+    top: 2px;
+}
+
+.toast-container.middle {
+    top: 50%;
+    margin-top: -32.5px;
+}
+
+.toast-container.bottom {
+    bottom: 2px;
+}

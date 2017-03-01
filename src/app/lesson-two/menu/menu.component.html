@@ -9,15 +9,6 @@
             </a>
         </div>
 
-        <div class="navbar-header" (mouseenter)="tooltip2.show()" (mouseleave)="tooltip2.hide()">
-            <a class="navbar-brand" routerLink="/">
-                Eduction
-                <mediasoft-tooltip #tooltip2="mediasoft-tooltip">
-                    <span>Free, Fast, Interesting</span>
-                </mediasoft-tooltip>
-            </a>
-        </div>
-
         <div class="collapse navbar-collapse" >
             <ul class="nav navbar-nav">
                 <li *ngFor="let item of menu" [mediasoft-menu-item]="item"></li>

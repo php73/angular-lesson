@@ -1,0 +1,50 @@
+<h1 class="text-center">Toast service demo page</h1>
+
+<div class="row">
+    <form class="col-md-10 col-md-offset-1">
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input name="title" id="title" type="text" class="form-control" [(ngModel)]="toast.title"/>
+        </div>
+        <div class="form-group">
+            <label for="text">Text</label>
+            <textarea name="text" id="text" class="form-control" [(ngModel)]="toast.text"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="timeout">Timeout</label>
+            <input name="timeout" id="timeout" type="text" class="form-control" [(ngModel)]="toast.timeout"/>
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <select name="type" id="type" class="form-control" [(ngModel)]="toast.type">
+                <option value="default">Default</option>
+                <option value="info">Info</option>
+                <option value="success">Success</option>
+                <option value="danger">Danger</option>
+                <option value="warning">Warning</option>
+                <option value="primary">Primary</option>
+            </select>
+        </div>
+        <div class="form-group">
+           <table class="table">
+               <tbody>
+               <tr>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('top', 'left')">top-left</button></td>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('top', 'center')">top-center</button></td>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('top', 'right')">top-right</button></td>
+               </tr>
+               <tr>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('middle', 'left')">middle-left</button></td>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('middle', 'center')">middle-center</button></td>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('middle', 'right')">middle-right</button></td>
+               </tr>
+               <tr>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('bottom', 'left')">bottom-left</button></td>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('bottom', 'center')">bottom-center</button></td>
+                   <td><button class="btn btn-xs btn-default" (click)="showToast('bottom', 'right')">bottom-right</button></td>
+               </tr>
+               </tbody>
+           </table>
+        </div>
+    </form>
+</div>

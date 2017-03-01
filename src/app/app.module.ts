@@ -9,6 +9,7 @@ import { LessonOneModule } from "./lesson-one/lesson-one.module";
 import { RouterModule } from "@angular/router";
 import { LessonTwoModule } from "./lesson-two/lesson-two.module";
 import { LessonThreeModule } from "./lesson-three/lesson-three.module";
+import { LessonFourModule } from "./lesson-four/lesson-four.module";
 
 @NgModule({
     declarations: [
@@ -28,6 +29,7 @@ import { LessonThreeModule } from "./lesson-three/lesson-three.module";
         LessonOneModule,
         LessonTwoModule,
         LessonThreeModule,
+        LessonFourModule,
     ],
     providers: [],
     bootstrap: [AppComponent]

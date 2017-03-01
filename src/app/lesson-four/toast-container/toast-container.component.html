@@ -1,0 +1,3 @@
+<div *ngFor="let container of containers" class="toast-container" [ngClass]="[container.horizontal, container.vertical]">
+    <mediasoft-toast *ngFor="let toast of toasts[container.horizontal][container.vertical]" [toast]="toast"></mediasoft-toast>
+</div>

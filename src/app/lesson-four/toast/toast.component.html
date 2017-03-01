@@ -1,0 +1,8 @@
+<div class="toast" [ngClass]="'toast--'+toast.type">
+    <div *ngIf="!toast.hideClose" class="toast__close" (click)="close()">x</div>
+    <div *ngIf="toast.title || toast.text" class="toast__body">
+        <span *ngIf="toast.title" class="toast__title" [innerHTML]="toast.title"></span>
+        <br *ngIf="toast.title && toast.text" />
+        <span *ngIf="toast.text" class="toast__text" [innerHtml]="toast.text"></span>
+    </div>
+</div>
