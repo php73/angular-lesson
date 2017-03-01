@@ -1,2 +1,8 @@
-<pre>{{ car | json }}</pre>
-<a class="btn btn-default" routerLink="/cars">Back to list</a>
+<h1>{{ car.manufacturer }} - {{ car.model }}</h1>
+<router-outlet></router-outlet>
+<nav>
+    <a class="btn btn-default" [routerLink]="['overview']">Overview</a>
+    <a class="btn btn-default" [routerLink]="['specs']">Technical Specs</a>
+    <a class="btn btn-default" [routerLink]="['/cars']">Back to list</a>
+</nav>
+
