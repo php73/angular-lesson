@@ -11,6 +11,7 @@ import { CarsService } from "./shared/cars.service";
 import { CarsResolver, CarResolver } from "./shared/resolvers";
 import { CarOverviewComponent } from "./car-overview/car-overview.component";
 import { CarSpecsComponent } from "./car-specs/car-specs.component";
+import { CanActivateCar, CanActivateChildCar, CanDeactivateCar } from "./shared/guards";
 
 
 @NgModule({
@@ -33,6 +34,10 @@ import { CarSpecsComponent } from "./car-specs/car-specs.component";
                 resolve: {
                     car: CarResolver
                 },
+                canActivate: [CanActivateCar],
+                canActivateChild: [CanActivateChildCar],
+                canDeactivate: [CanDeactivateCar],
+                // canLoad: [CanLoadCar]
                 children: [
                     { path: '', redirectTo: 'overview', pathMatch: 'full' },
                     { path: 'overview', component: CarOverviewComponent },
@@ -53,6 +58,9 @@ import { CarSpecsComponent } from "./car-specs/car-specs.component";
         CarsService,
         CarsResolver,
         CarResolver,
+        CanActivateCar,
+        CanActivateChildCar,
+        CanDeactivateCar,
     ],
 })
 export class RoutingSampleModule {
