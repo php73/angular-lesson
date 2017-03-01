@@ -12,6 +12,7 @@ import { CarsResolver, CarResolver } from "./shared/resolvers";
 import { CarOverviewComponent } from "./car-overview/car-overview.component";
 import { CarSpecsComponent } from "./car-specs/car-specs.component";
 import { CanActivateCar, CanActivateChildCar, CanDeactivateCar } from "./shared/guards";
+import { LoaderComponent } from "./loader/loader.comoponent";
 
 
 @NgModule({
@@ -50,9 +51,11 @@ import { CanActivateCar, CanActivateChildCar, CanDeactivateCar } from "./shared/
         CarsListComponent,
         CarsViewComponent,
         CarOverviewComponent,
-        CarSpecsComponent
+        CarSpecsComponent,
+        LoaderComponent,
     ],
     exports: [
+        LoaderComponent,
     ],
     providers: [
         CarsService,

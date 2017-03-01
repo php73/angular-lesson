@@ -7,10 +7,15 @@ export class CarsService {
     constructor(private http: Http) { }
 
     public list() {
-        return this.http.get('/api/v1/cars.json').toPromise()
-            .then((response: Response) => {
-                return response.json();
-            })
+        return new Promise((resolve, reject) => {
+            this.http.get('/api/v1/cars.json').toPromise()
+                .then((response: Response) => {
+                    setTimeout(function () {
+                        resolve(response.json())
+                    }, 5000)
+                })
+                .catch(reject)
+        });
     }
 
     public view(id) {
