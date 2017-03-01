@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
+import { PersonsService } from "../shared/persons.service";
 
 @Component({
     selector: 'mediasoft-ng-for-demo',
@@ -15,7 +16,7 @@ export class NgForDemoComponent implements OnInit {
         {name: 'Bob', background: 'black', birthday: "2001-10-23"}
     ];
 
-    constructor(private http: Http) {
+    constructor(private personsService: PersonsService) {
     }
 
     ngOnInit() {
@@ -32,9 +33,8 @@ export class NgForDemoComponent implements OnInit {
 
     public loadPersons()
     {
-        this.http.get('/api/v1/persons.json').toPromise()
-            .then((response: Response) => {
-                this.persons = response.json();
-            })
+        this.personsService.list().then((persons: any) => {
+            this.persons = persons
+        })
     }
 }

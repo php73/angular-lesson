@@ -8,6 +8,7 @@ import { FormsModule } from "@angular/forms";
 import { BrowserModule } from "@angular/platform-browser";
 import { HttpModule } from "@angular/http";
 import { RouterModule } from "@angular/router";
+import { PersonsService } from "./shared/persons.service";
 
 @NgModule({
     imports: [
@@ -31,6 +32,7 @@ import { RouterModule } from "@angular/router";
         LessonOneComponent
     ],
     providers: [
+        PersonsService
     ],
 })
 export class LessonOneModule {
